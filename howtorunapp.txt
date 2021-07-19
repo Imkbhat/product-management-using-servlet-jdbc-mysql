@@ -1,0 +1,38 @@
+1. Install mysql and login to mysql
+2. Create database product_management in mysql as ==> CREATE DATABASE product_management;
+3. use  product_management;
+4. CREATE TABLE IF NOT EXISTS `product_management`.`users` (
+`user_id` INT AUTO_INCREMENT,
+`user_name` VARCHAR(150) NOT NULL,
+`password` VARCHAR(100),
+`contact_number` VARCHAR(75),
+`email` VARCHAR(255),
+PRIMARY KEY (`user_id`))
+ENGINE = InnoDB;
+
+5. Create users table as shown below
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| user_id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| user_name      | varchar(150) | NO   |     | NULL    |                |
+| password       | varchar(100) | YES  |     | NULL    |                |
+| contact_number | varchar(75)  | YES  |     | NULL    |                |
+| email          | varchar(255) | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+
+6. CREATE TABLE IF NOT EXISTS `product_management`.`products` (
+`product_id` INT AUTO_INCREMENT,
+`product_name` VARCHAR(150) NOT NULL
+PRIMARY KEY (`product_name`))
+ENGINE = InnoDB;
+
+7. products table shown as below
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| product_id   | int(11)      | NO   |        | NULL    | auto_increment |
+| product_name | varchar(150) | NO   |  PRI   | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+
+8. go to eclipse import project and right click run on server
